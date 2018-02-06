@@ -2,7 +2,7 @@
 ;;; Commentary:
 ;;; Basic Emacs config
 
-;; Code
+;;; Code:
 
 ;; Keybindings
 (global-set-key (kbd "C-x f") #'helm-recentf)
