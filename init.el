@@ -13,6 +13,8 @@
 
 (setq tab-always-indent 'complete)
 
+(setq save-interprogram-paste-before-kill t)
+
 ;; Scroll only half-pages.
 (require 'view)
 (global-set-key "\C-v" 'View-scroll-half-page-forward)
