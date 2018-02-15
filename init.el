@@ -58,7 +58,6 @@
 (tool-bar-mode -1)
 (global-linum-mode t)
 (windmove-default-keybindings)
-(recentf-mode 1)
 
 (setq inhibit-startup-screen t)
 (defalias 'yes-or-no-p 'y-or-n-p)
@@ -67,19 +66,6 @@
 
 (setq mac-option-modifier 'super)
 (setq mac-command-modifier 'meta)
-
-;; Ido
-(require 'ido)
-(ido-mode t)
-
-(defun ido-recentf-open ()
-  "Use `ido-completing-read' to find a recent file."
-  (interactive)
-  (if (find-file (ido-completing-read "Find recent file: " recentf-list))
-      (message "Opening file...")
-    (message "Aborting")))
-
-(recentf-mode t)
 
 ;; Exec path from shell
 (when (memq window-system '(mac ns x))
