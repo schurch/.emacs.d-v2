@@ -128,9 +128,16 @@
 (add-to-list 'auto-mode-alist '("\\.mustache\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.djhtml\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.leaf?\\'" . web-mode))
 
 ;; Emmet
 (add-hook 'web-mode-hook 'emmet-mode)
+
+;; Dockerfile
+(require 'dockerfile-mode)
+(add-to-list 'auto-mode-alist '("Dockerfile\\'" . dockerfile-mode))
+
+(require 'docker-compose-mode)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -142,7 +149,7 @@
     ("65a2801c39211a69af6cc4c8441f3f51871404b9d12a6f2966a7bc33468995c7" "ff7625ad8aa2615eae96d6b4469fcc7d3d20b2e1ebc63b761a349bebbb9d23cb" default)))
  '(package-selected-packages
    (quote
-    (emmet-mode impatient-mode skewer-mode web-mode drag-stuff doom-themes dracula-theme paredit multi-web-mode js2-mode idris-mode robe projectile-rails helm exec-path-from-shell projectile yaml-mode magit flycheck-elm elm-mode intero company flycheck))))
+    (docker-compose-mode dockerfile-mode docker emmet-mode impatient-mode skewer-mode web-mode drag-stuff doom-themes dracula-theme paredit multi-web-mode js2-mode idris-mode robe projectile-rails helm exec-path-from-shell projectile yaml-mode magit flycheck-elm elm-mode intero company flycheck))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
