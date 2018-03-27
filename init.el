@@ -15,6 +15,8 @@
 
 (setq save-interprogram-paste-before-kill t)
 
+(set-face-attribute 'default nil :font "SF Mono-13")
+
 ;; Scroll only half-pages.
 (require 'view)
 (global-set-key "\C-v" 'View-scroll-half-page-forward)
@@ -50,7 +52,7 @@
 
 ;; Theme
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
-(load-theme 'zenburn t)
+(load-theme 'dracula t)
 
 ;; General setup
 (menu-bar-mode -1)
@@ -150,7 +152,26 @@
    ["#3F3F3F" "#CC9393" "#7F9F7F" "#F0DFAF" "#8CD0D3" "#DC8CC3" "#93E0E3" "#DCDCCC"])
  '(custom-safe-themes
    (quote
-    ("6fb46156a89a9d1506d0acf7e904eabfaafccd3d95208cf43fac891918b7e3fb" "65a2801c39211a69af6cc4c8441f3f51871404b9d12a6f2966a7bc33468995c7" "ff7625ad8aa2615eae96d6b4469fcc7d3d20b2e1ebc63b761a349bebbb9d23cb" default)))
+    ("3d5720f488f2ed54dd4e40e9252da2912110948366a16aef503f3e9e7dfe4915" "6fb46156a89a9d1506d0acf7e904eabfaafccd3d95208cf43fac891918b7e3fb" "65a2801c39211a69af6cc4c8441f3f51871404b9d12a6f2966a7bc33468995c7" "ff7625ad8aa2615eae96d6b4469fcc7d3d20b2e1ebc63b761a349bebbb9d23cb" default)))
+ '(ensime-sem-high-faces
+   (quote
+    ((var :foreground "#9876aa" :underline
+	  (:style wave :color "yellow"))
+     (val :foreground "#9876aa")
+     (varField :slant italic)
+     (valField :foreground "#9876aa" :slant italic)
+     (functionCall :foreground "#a9b7c6")
+     (implicitConversion :underline
+			 (:color "#808080"))
+     (implicitParams :underline
+		     (:color "#808080"))
+     (operator :foreground "#cc7832")
+     (param :foreground "#a9b7c6")
+     (class :foreground "#4e807d")
+     (trait :foreground "#4e807d" :slant italic)
+     (object :foreground "#6897bb" :slant italic)
+     (package :foreground "#cc7832")
+     (deprecated :strike-through "#a9b7c6"))))
  '(fci-rule-color "#383838")
  '(nrepl-message-colors
    (quote
