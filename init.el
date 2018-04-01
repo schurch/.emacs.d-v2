@@ -12,7 +12,7 @@
 (global-set-key (kbd "C-x b") #'helm-buffers-list)
 
 (setq tab-always-indent 'complete)
-
+(setq-default indent-tabs-mode nil)
 (setq save-interprogram-paste-before-kill t)
 
 (set-face-attribute 'default nil :font "SF Mono-13")
@@ -37,6 +37,9 @@
   (add-to-list 'package-archives '("gnu" . "https://elpa.gnu.org/packages/")))
 
 (package-initialize)
+
+;; JS
+(add-to-list 'auto-mode-alist `(,(rx ".js" string-end) . js2-mode))
 
 ;; Rails
 (projectile-rails-global-mode)
