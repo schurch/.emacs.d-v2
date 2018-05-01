@@ -13,6 +13,7 @@
 
 (setq tab-always-indent 'complete)
 (setq-default indent-tabs-mode nil)
+(setq-default show-trailing-whitespace t)
 (setq save-interprogram-paste-before-kill t)
 
 (set-face-attribute 'default nil :font "SF Mono-13")
